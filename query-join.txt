@@ -19,5 +19,5 @@ SELECT `courses`.*, `teachers`.`name` AS nome, `teachers`.`surname` AS cognome
 FROM `courses`
 JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id`
 JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`
-WHERE `teachers`.`name` LIKE '%fulvio%'
-AND  `teachers`.`name` LIKE '%amato%';
+WHERE `teachers`.`name` = 'Fulvio'
+AND  `teachers`.`surname` = 'Amato';
