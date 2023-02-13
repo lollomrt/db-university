@@ -9,3 +9,9 @@ Query 2 - Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 SELECT COUNT(*) AS `numero_insegnanti`, `office_address`
 FROM `teachers`
 GROUP BY `office_address`;
+
+Query 3 - Calcolare la media dei voti di ogni appello d'esame
+
+SELECT AVG(`vote`) AS `media_voti`, `exam_id` AS `appello`
+FROM `exam_student`
+GROUP BY `appello`;
